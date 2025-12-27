@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Junji Ito Calculator Demo</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<video autoplay muted loop playsinline id="bg-video">
+  <source src="junji.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
+
+<audio id="bg-audio" loop>
+  <source src="junji.mp3" type="audio/mpeg">
+</audio>
+
+<div id="audio-wrapper">
+  <button id="audio-btn">
+    <img id="audio-icon" src="tomie.jpg" alt="audio">
+  </button>
+  <span id="audio-label">Tap for Audio</span>
+</div>
+
+<div id="calculator">
+  <input type="text" id="result" disabled value="0">
+  <div class="buttons">
+    <button onclick="appendNumber('7')">7</button>
+    <button onclick="appendNumber('8')">8</button>
+    <button onclick="appendNumber('9')">9</button>
+    <button onclick="chooseOperator('/')" class="operator">/</button>
+
+    <button onclick="appendNumber('4')">4</button>
+    <button onclick="appendNumber('5')">5</button>
+    <button onclick="appendNumber('6')">6</button>
+    <button onclick="chooseOperator('*')" class="operator">*</button>
+
+    <button onclick="appendNumber('1')">1</button>
+    <button onclick="appendNumber('2')">2</button>
+    <button onclick="appendNumber('3')">3</button>
+    <button onclick="chooseOperator('-')" class="operator">-</button>
+
+    <button onclick="appendNumber('0')">0</button>
+    <button onclick="appendDot()">.</button>
+    <button onclick="calculate()" class="operator">=</button>
+    <button onclick="chooseOperator('+')" class="operator">+</button>
+
+    <button onclick="clearResult()" class="clear">C</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
